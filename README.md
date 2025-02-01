@@ -7,6 +7,7 @@ This script performs motif analysis on a FASTA file (named "r_bifella.fasta). It
 Input:
 
 A FASTA file containing DNA sequences (named r_bifella.fasta).
+
 A file called interesting_motifs.txt containing a list of motifs (one motif per line) that the script will search for.
 
 Output:
@@ -19,4 +20,5 @@ How to Run:
 To execute the script, navigate to the directory containing the script (ensuring the above input files are in the same directory) and run:
 
 chmod +X hw.sh
+
 bash hw.sh
