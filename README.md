@@ -1,7 +1,6 @@
 ## Motif Analysis Script
-### Performs motif analysis on a given FASTA file.
-### Vivek M. - 10/23/2024
-
+#### Performs motif analysis on a given FASTA file.
+#### Vivek M. - 10/23/2024
 ### Description
 This script performs motif analysis on a FASTA file (named "r_bifella.fasta). It compares the motifs to the given genome, and keeps a count for instances of said motif. Gene sequences where motifs are found are extracted into another FASTA file named the corresponding motif.
 
