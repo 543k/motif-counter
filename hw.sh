@@ -14,17 +14,18 @@ mkdir ./motifs
 #Nested for loop to compare motifs to genome
 for motif in $motifs
 do
-  for i in "${geneArray[@]}"
+  for gene in "${geneArray[@]}"
   do
-    if [[ $i == *"$motif"* ]]
+    if [[ $gene == *"$motif"* ]]
     then
       #Writes matching gene to corresponding motif fasta
       echo $temp >> ./motifs/"$motif.fasta"
-      echo $i >> ./motifs/"$motif.fasta"
-      ((counter++))
+      echo $gene >> ./motifs/"$motif.fasta"
+	  count=$(echo $gene | grep -Fo $motif | wc -l)
+	  ((counter = $counter + $count))
     fi
      #Retains gene name from orinal fasta file
-     temp=$i
+     temp=$gene
   done
   #Outputs number of motif occurences, and writes to motif_count.txt
   echo "$motif has $counter occurences"
